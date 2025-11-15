@@ -155,13 +155,13 @@ template.innerHTML = `
 `;
 
 export class Itinerary extends HTMLElement {
-  #lastQuery = null;
-  #originInput;
-  #destinationInput;
-  #originSuggestions;
-  #destinationSuggestions;
-  #originTimeout = null;
-  #destinationTimeout = null;
+  _lastQuery = null;
+  _originInput;
+  _destinationInput;
+  _originSuggestions;
+  _destinationSuggestions;
+  _originTimeout = null;
+  _destinationTimeout = null;
 
   constructor() {
     super();
@@ -171,10 +171,10 @@ export class Itinerary extends HTMLElement {
 
   connectedCallback() {
     const form = this.shadowRoot.querySelector('form');
-    this.#originInput = form.elements.namedItem('origin');
-    this.#destinationInput = form.elements.namedItem('destination');
-    this.#originSuggestions = this.shadowRoot.querySelector('.suggestions[data-for="origin"]');
-    this.#destinationSuggestions = this.shadowRoot.querySelector('.suggestions[data-for="destination"]');
+    this._originInput = form.elements.namedItem('origin');
+    this._destinationInput = form.elements.namedItem('destination');
+    this._originSuggestions = this.shadowRoot.querySelector('.suggestions[data-for="origin"]');
+    this._destinationSuggestions = this.shadowRoot.querySelector('.suggestions[data-for="destination"]');
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -182,7 +182,7 @@ export class Itinerary extends HTMLElement {
       const destination = form.destination.value.trim();
       if (!origin || !destination) return;
 
-      this.#lastQuery = { origin, destination };
+      this._lastQuery = { origin, destination };
 
       this.dispatchEvent(new CustomEvent('request-itinerary', {
         bubbles: true,
@@ -191,62 +191,62 @@ export class Itinerary extends HTMLElement {
       }));
     });
 
-    this.#originInput.addEventListener('input', () => {
-      this.#debouncedFetchSuggestions(
-        this.#originInput,
-        this.#originSuggestions,
+    this._originInput.addEventListener('input', () => {
+      this._debouncedFetchSuggestions(
+        this._originInput,
+        this._originSuggestions,
         'origin'
       );
     });
 
 
     // Autocomplétion pour la destination
-    this.#destinationInput.addEventListener('input', () => {
-      this.#debouncedFetchSuggestions(
-        this.#destinationInput,
-        this.#destinationSuggestions,
+    this._destinationInput.addEventListener('input', () => {
+      this._debouncedFetchSuggestions(
+        this._destinationInput,
+        this._destinationSuggestions,
         'destination'
       );
     });
 
-    this.#originInput.addEventListener('blur', () => {
-      setTimeout(() => this.#clearSuggestions(this.#originSuggestions), 150);
+    this._originInput.addEventListener('blur', () => {
+      setTimeout(() => this._clearSuggestions(this._originSuggestions), 150);
     });
-    this.#destinationInput.addEventListener('blur', () => {
-      setTimeout(() => this.#clearSuggestions(this.#destinationSuggestions), 150);
+    this._destinationInput.addEventListener('blur', () => {
+      setTimeout(() => this._clearSuggestions(this._destinationSuggestions), 150);
     });
   }
 
   getLastQuery() {
-    return this.#lastQuery;
+    return this._lastQuery;
   }
 
-  #debouncedFetchSuggestions(inputEl, listEl, type) {
+  _debouncedFetchSuggestions(inputEl, listEl, type) {
     const value = inputEl.value.trim();
 
     if (value.length < 3) {
-      this.#clearSuggestions(listEl);
+      this._clearSuggestions(listEl);
       return;
     }
 
-    const timeoutProp = type === 'origin' ? '#originTimeout' : '#destinationTimeout';
+    const timeoutProp = type === 'origin' ? '_originTimeout' : '_destinationTimeout';
     if (this[timeoutProp]) {
       clearTimeout(this[timeoutProp]);
     }
 
     this[timeoutProp] = setTimeout(() => {
-      this.#fetchSuggestions(value)
+      this._fetchSuggestions(value)
         .then((features) => {
-          this.#renderSuggestions(listEl, inputEl, features);
+          this._renderSuggestions(listEl, inputEl, features);
         })
         .catch((err) => {
           console.error('Erreur API adresse:', err);
-          this.#clearSuggestions(listEl);
+          this._clearSuggestions(listEl);
         });
     }, 250);
   }
 
-  async #fetchSuggestions(query) {
+  async _fetchSuggestions(query) {
     const url = new URL('https://api-adresse.data.gouv.fr/search/');
     url.searchParams.set('q', query);
     url.searchParams.set('limit', '5');
@@ -260,8 +260,8 @@ export class Itinerary extends HTMLElement {
     return data.features || [];
   }
 
-  #renderSuggestions(listEl, inputEl, features) {
-    this.#clearSuggestions(listEl);
+  _renderSuggestions(listEl, inputEl, features) {
+    this._clearSuggestions(listEl);
 
     if (!features.length) {
       return;
@@ -307,14 +307,14 @@ export class Itinerary extends HTMLElement {
           inputEl.dataset.lat = li.dataset.lat;
           inputEl.dataset.lon = li.dataset.lon;
         }
-        this.#clearSuggestions(listEl);
+        this._clearSuggestions(listEl);
       });
 
       listEl.appendChild(li);
     });
   }
 
-  #clearSuggestions(listEl) {
+  _clearSuggestions(listEl) {
     listEl.innerHTML = '';
     listEl.classList.add('hidden');
   }
