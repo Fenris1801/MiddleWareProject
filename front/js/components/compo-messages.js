@@ -83,10 +83,6 @@ export class Messages extends HTMLElement {
       }));
     });
 
-    // 🔌 Ici, plus tard, tu pourras :
-    // - ouvrir un WebSocket vers ActiveMQ (via STOMP)
-    // - écouter une queue/topic
-    // - appeler this.addMessage(...) à chaque message reçu
   }
 
   addMessage(text) {
@@ -97,7 +93,7 @@ export class Messages extends HTMLElement {
     const time = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
 
     div.innerHTML = `<span class="time">[${time}]</span>${text}`;
-    container.prepend(div); // le plus récent en haut
+    container.prepend(div);
   }
 
   setSteps(steps) {
