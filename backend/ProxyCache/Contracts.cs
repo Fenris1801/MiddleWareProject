@@ -4,16 +4,19 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
+using System.Configuration;
 
 namespace ProxyCache
 {
+    [DataContract]
     public class Contracts
     {
-        // api key jdeco: 212c5b75d766b9bbc8571d0499a2c1612a7a88c0
-        [DataMember] public List<Contract> AllContracts = new List<Contract>();
-        public Contracts(string address)
+        [DataMember] public List<Contract> everyContracts = new List<Contract>();
+        public Contracts(string ContractName)
         {
-            var url = $"https://api.jcdecaux.com/vls/v3/contracts?apiKey=212c5b75d766b9bbc8571d0499a2c1612a7a88c0";
+
+            var apiKey = ConfigurationManager.AppSettings["JcDecauxApiKey"];
+            var url = $"https://api.jcdecaux.com/vls/v3/contracts?apiKey={apiKey}";
 
             var req = new HttpClient();
 
@@ -31,7 +34,7 @@ namespace ProxyCache
                 if (!string.IsNullOrWhiteSpace(country) && !string.Equals(country, "FR"))
                     continue;
 
-                AllContracts.Add(new Contract
+                everyContracts.Add(new Contract
                 {
                     ContractName = name,
                     Cities = (cities != null) ? new HashSet<string>(cities, StringComparer.OrdinalIgnoreCase) : new HashSet<string>(StringComparer.OrdinalIgnoreCase)

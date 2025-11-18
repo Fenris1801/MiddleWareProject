@@ -5,3 +5,6 @@ C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\ProxyCache\obj\Debug\Prox
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\ProxyCache\obj\Debug\ProxyCache.csproj.CoreCompileInputs.cache
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\ProxyCache\obj\Debug\ProxyCache.dll
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\ProxyCache\obj\Debug\ProxyCache.pdb
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\ProxyCache\bin\Debug\Newtonsoft.Json.dll
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\ProxyCache\bin\Debug\Newtonsoft.Json.xml
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\ProxyCache\obj\Debug\ProxyCache.csproj.Up2Date

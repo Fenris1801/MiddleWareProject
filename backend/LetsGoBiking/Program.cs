@@ -6,7 +6,7 @@ namespace ServerGPS
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             using (WebServiceHost host = new WebServiceHost(typeof(ServiceGPS), new Uri("http://localhost:8080/ServerGPS")))
             {

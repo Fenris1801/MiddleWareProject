@@ -15,5 +15,8 @@ namespace ProxyCache
 
         [OperationContract]
         Contracts GetContracts();
+
+        [OperationContract]
+        string GetRoute(bool isBike,AddressPoint from, AddressPoint to);
     }
 }

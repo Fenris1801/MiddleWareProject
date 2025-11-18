@@ -5,3 +5,16 @@ C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\Le
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\LetsGoBiking.pdb
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\obj\Debug\LetsGoBiking.dll
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\obj\Debug\LetsGoBiking.pdb
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\Newtonsoft.Json.dll
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\ProxyCache.dll
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\System.Text.Json.dll
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\System.Memory.dll
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\System.IO.Pipelines.dll
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\System.ValueTuple.dll
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\ProxyCache.pdb
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\ProxyCache.dll.config
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\Newtonsoft.Json.xml
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\obj\Debug\LetsGoBi.CAA37325.Up2Date

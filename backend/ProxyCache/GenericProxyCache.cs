@@ -8,7 +8,7 @@ namespace ProxyCache
 {
     internal class GenericProxyCache<T>
     {
-        ObjectCache cache;
+        private readonly ObjectCache cache;
 
         public GenericProxyCache(string id)
         {
