@@ -1,0 +1,7 @@
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\ProxyCache\bin\Debug\ProxyCache.dll.config
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\ProxyCache\bin\Debug\ProxyCache.dll
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\ProxyCache\bin\Debug\ProxyCache.pdb
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\ProxyCache\obj\Debug\ProxyCache.csproj.AssemblyReference.cache
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\ProxyCache\obj\Debug\ProxyCache.csproj.CoreCompileInputs.cache
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\ProxyCache\obj\Debug\ProxyCache.dll
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\ProxyCache\obj\Debug\ProxyCache.pdb

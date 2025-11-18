@@ -187,7 +187,20 @@ export class Itinerary extends HTMLElement {
       this.dispatchEvent(new CustomEvent('request-itinerary', {
         bubbles: true,
         composed: true,
-        detail: { origin, destination }
+
+        detail: {
+          origin: {
+            label: form.origin.value.trim(),
+            lat: this._originInput.dataset.lat,
+            lon: this._originInput.dataset.lon
+          },
+          destination: {
+            label: form.destination.value.trim(),
+            lat: this._destinationInput.dataset.lat,
+            lon: this._destinationInput.dataset.lon
+          }
+        }
+
       }));
     });
 
