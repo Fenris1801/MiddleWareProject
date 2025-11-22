@@ -1,4 +1,40 @@
-// === INITIALISATION LEAFLET ===
+const itineraryComponent = document.querySelector('compo-itinerary');
+itineraryComponent.addEventListener('request-itinerary', async (event) => {
+    const { origin, destination } = event.detail;
+
+    // Sécuriser / parser les coordonnées
+    const fromLat = parseFloat(origin.lat);
+    const fromLon = parseFloat(origin.lon);
+    const toLat = parseFloat(destination.lat);
+    const toLon = parseFloat(destination.lon);
+
+    // Important : vérifier qu’on a bien des coords (que l’utilisateur a cliqué sur une suggestion)
+    if (
+        Number.isNaN(fromLat) || Number.isNaN(fromLon) ||
+        Number.isNaN(toLat) || Number.isNaN(toLon)
+    ) {
+        alert("Merci de choisir les adresses dans la liste de suggestions.");
+        return;
+    }
+
+    const baseUrl = 'http://localhost:8080/ServerGPS/itinerary';
+    const url = `${baseUrl}?fromLat=${fromLat}&fromLon=${fromLon}&toLat=${toLat}&toLon=${toLon}`;
+
+    try {
+        const res = await fetch(url);
+        console.log('Itinéraire reçu :', res);
+        if (!res.ok) {
+            throw new Error(`Erreur HTTP ${res.status}`);
+        }
+        const data = await res.json();
+
+        // TODO : afficher l’itinéraire sur la carte, ou dans la page
+        console.log('Itinéraire reçu :', data);
+    } catch (err) {
+        console.error('Erreur lors de la récupération de l’itinéraire :', err);
+        alert("Impossible de récupérer l’itinéraire.");
+    }
+});
 
 export let map = null;
 let markers = {};
@@ -21,7 +57,6 @@ export function initMap() {
 export function setItinerary(data) {
     if (!map) return;
 
-    // Suppression des anciens éléments
     Object.values(markers).forEach(m => map.removeLayer(m));
     markers = {};
 

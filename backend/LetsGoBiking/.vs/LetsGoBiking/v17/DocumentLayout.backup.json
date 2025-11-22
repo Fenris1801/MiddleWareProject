@@ -3,11 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\LetsGoBiking\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7029451A-1C47-48C4-87B2-9C7CFED2FB93}|..\\ProxyCache\\ProxyCache.csproj|c:\\users\\doudo\\documents\\si4\\middlewareproject\\backend\\proxycache\\corsbehaviorattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A4788633-7620-463E-8543-14B79C57E53C}|LetsGoBiking.csproj|C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\LetsGoBiking\\servicegps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4788633-7620-463E-8543-14B79C57E53C}|LetsGoBiking.csproj|solutionrelative:servicegps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7029451A-1C47-48C4-87B2-9C7CFED2FB93}|..\\ProxyCache\\ProxyCache.csproj|c:\\users\\doudo\\documents\\si4\\middlewareproject\\backend\\proxycache\\servicegps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7029451A-1C47-48C4-87B2-9C7CFED2FB93}|..\\ProxyCache\\ProxyCache.csproj|c:\\users\\doudo\\documents\\si4\\middlewareproject\\backend\\proxycache\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4788633-7620-463E-8543-14B79C57E53C}|LetsGoBiking.csproj|C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\LetsGoBiking\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A4788633-7620-463E-8543-14B79C57E53C}|LetsGoBiking.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7029451A-1C47-48C4-87B2-9C7CFED2FB93}|..\\ProxyCache\\ProxyCache.csproj|c:\\users\\doudo\\documents\\si4\\middlewareproject\\backend\\proxycache\\stations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7029451A-1C47-48C4-87B2-9C7CFED2FB93}|..\\ProxyCache\\ProxyCache.csproj|c:\\users\\doudo\\documents\\si4\\middlewareproject\\backend\\proxycache\\contracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7029451A-1C47-48C4-87B2-9C7CFED2FB93}|..\\ProxyCache\\ProxyCache.csproj|c:\\users\\doudo\\documents\\si4\\middlewareproject\\backend\\proxycache\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7029451A-1C47-48C4-87B2-9C7CFED2FB93}|..\\ProxyCache\\ProxyCache.csproj|c:\\users\\doudo\\documents\\si4\\middlewareproject\\backend\\proxycache\\genericproxycache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -17,17 +36,7 @@
       "RelativeMoniker": "D:0:0:{A4788633-7620-463E-8543-14B79C57E53C}|LetsGoBiking.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7029451A-1C47-48C4-87B2-9C7CFED2FB93}|..\\ProxyCache\\ProxyCache.csproj|c:\\users\\doudo\\documents\\si4\\middlewareproject\\backend\\proxycache\\stations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7029451A-1C47-48C4-87B2-9C7CFED2FB93}|..\\ProxyCache\\ProxyCache.csproj|c:\\users\\doudo\\documents\\si4\\middlewareproject\\backend\\proxycache\\station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A4788633-7620-463E-8543-14B79C57E53C}|LetsGoBiking.csproj|c:\\users\\doudo\\documents\\si4\\middlewareproject\\backend\\letsgobiking\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A4788633-7620-463E-8543-14B79C57E53C}|LetsGoBiking.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7029451A-1C47-48C4-87B2-9C7CFED2FB93}|..\\ProxyCache\\ProxyCache.csproj|c:\\users\\doudo\\documents\\si4\\middlewareproject\\backend\\proxycache\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4788633-7620-463E-8543-14B79C57E53C}|LetsGoBiking.csproj|C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\LetsGoBiking\\iservicegps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,22 +59,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 126,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Contract.cs",
-              "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\Contract.cs",
-              "RelativeDocumentMoniker": "..\\ProxyCache\\Contract.cs",
-              "ToolTip": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\Contract.cs",
-              "RelativeToolTip": "..\\ProxyCache\\Contract.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T01:45:58.979Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -81,6 +76,57 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ServiceGPS.cs",
+              "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\ServiceGPS.cs",
+              "RelativeDocumentMoniker": "..\\ProxyCache\\ServiceGPS.cs",
+              "ToolTip": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\ServiceGPS.cs",
+              "RelativeToolTip": "..\\ProxyCache\\ServiceGPS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T20:28:06.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CorsBehaviorAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\CorsBehaviorAttribute.cs",
+              "RelativeDocumentMoniker": "..\\ProxyCache\\CorsBehaviorAttribute.cs",
+              "ToolTip": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\CorsBehaviorAttribute.cs",
+              "RelativeToolTip": "..\\ProxyCache\\CorsBehaviorAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T20:27:56.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\App.config",
+              "RelativeDocumentMoniker": "..\\ProxyCache\\App.config",
+              "ToolTip": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\App.config",
+              "RelativeToolTip": "..\\ProxyCache\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-20T09:25:01.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Contract.cs",
+              "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\Contract.cs",
+              "RelativeDocumentMoniker": "..\\ProxyCache\\Contract.cs",
+              "ToolTip": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\Contract.cs",
+              "RelativeToolTip": "..\\ProxyCache\\Contract.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T01:45:58.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "GenericProxyCache.cs",
               "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\GenericProxyCache.cs",
               "RelativeDocumentMoniker": "..\\ProxyCache\\GenericProxyCache.cs",
@@ -88,38 +134,35 @@
               "RelativeToolTip": "..\\ProxyCache\\GenericProxyCache.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAswBcAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T18:19:09.997Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T18:19:09.997Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Stations.cs",
               "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\Stations.cs",
               "RelativeDocumentMoniker": "..\\ProxyCache\\Stations.cs",
               "ToolTip": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\Stations.cs",
               "RelativeToolTip": "..\\ProxyCache\\Stations.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAiwBMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T18:18:15.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T18:18:15.432Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\LetsGoBiking\\App.config",
               "RelativeDocumentMoniker": "App.config",
               "ToolTip": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\LetsGoBiking\\App.config",
               "RelativeToolTip": "App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-11-17T16:29:35.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T16:29:35.809Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "AddressPointDTO.cs",
               "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\AddressPointDTO.cs",
               "RelativeDocumentMoniker": "..\\ProxyCache\\AddressPointDTO.cs",
@@ -131,20 +174,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ServiceGPS.cs",
               "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\LetsGoBiking\\ServiceGPS.cs",
               "RelativeDocumentMoniker": "ServiceGPS.cs",
               "ToolTip": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\LetsGoBiking\\ServiceGPS.cs",
               "RelativeToolTip": "ServiceGPS.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAuwJkAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T17:37:29.384Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "ProxyCache.cs",
               "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\ProxyCache.cs",
               "RelativeDocumentMoniker": "..\\ProxyCache\\ProxyCache.cs",
@@ -156,20 +199,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Contracts.cs",
               "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\Contracts.cs",
               "RelativeDocumentMoniker": "..\\ProxyCache\\Contracts.cs",
               "ToolTip": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\Contracts.cs",
               "RelativeToolTip": "..\\ProxyCache\\Contracts.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAmwBYAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAcwBcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T01:48:56.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T01:48:56.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "IServiceGPS.cs",
               "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\LetsGoBiking\\IServiceGPS.cs",
               "RelativeDocumentMoniker": "IServiceGPS.cs",
@@ -177,12 +219,11 @@
               "RelativeToolTip": "IServiceGPS.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T09:01:26.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T09:01:26.034Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\LetsGoBiking\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -190,12 +231,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAuwAgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T17:39:45.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T17:39:45.77Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Station.cs",
               "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\Station.cs",
               "RelativeDocumentMoniker": "..\\ProxyCache\\Station.cs",
@@ -203,12 +243,11 @@
               "RelativeToolTip": "..\\ProxyCache\\Station.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAYwCMAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T00:58:44.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T00:58:44.58Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "IProxyCache.cs",
               "DocumentMoniker": "C:\\Users\\doudo\\Documents\\SI4\\MiddleWareProject\\backend\\ProxyCache\\IProxyCache.cs",
               "RelativeDocumentMoniker": "..\\ProxyCache\\IProxyCache.cs",

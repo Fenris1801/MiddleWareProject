@@ -6,7 +6,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Security.Cryptography;
 
-namespace LetsGoBiking { 
+namespace LetsGoBiking {
+
+    [CorsBehavior]
     public class ServiceGPS : IServiceGPS 
     {
         public string GetItinerary(double originLat, double originLon, double destLat, double destLon)

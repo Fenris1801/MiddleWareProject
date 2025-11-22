@@ -12,7 +12,6 @@ namespace ProxyCache
 {
     internal class Stations
     {
-        //todo un peu comme contratcs + accesseur en toList
         [DataMember] public List<Station> everyStations = new List<Station>();
         public Stations(string contract)
         {
