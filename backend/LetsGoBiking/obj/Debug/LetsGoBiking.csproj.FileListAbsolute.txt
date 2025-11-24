@@ -1,12 +1,8 @@
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\obj\Debug\LetsGoBiking.csproj.AssemblyReference.cache
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\obj\Debug\LetsGoBiking.csproj.CoreCompileInputs.cache
-C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\LetsGoBiking.dll.config
-C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\LetsGoBiking.dll
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\LetsGoBiking.pdb
-C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\obj\Debug\LetsGoBiking.dll
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\obj\Debug\LetsGoBiking.pdb
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\Newtonsoft.Json.dll
-C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\ProxyCache.dll
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\System.Text.Json.dll
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\System.Memory.dll
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\System.IO.Pipelines.dll
@@ -15,6 +11,12 @@ C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\Sy
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\ProxyCache.pdb
-C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\ProxyCache.dll.config
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\Newtonsoft.Json.xml
 C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\obj\Debug\LetsGoBi.CAA37325.Up2Date
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\LetsGoBiking.exe.config
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\LetsGoBiking.exe
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\obj\Debug\LetsGoBiking.csproj.SuggestedBindingRedirects.cache
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\obj\Debug\LetsGoBiking.exe.config
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\obj\Debug\LetsGoBiking.exe
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\ProxyCache.exe
+C:\Users\doudo\Documents\SI4\MiddleWareProject\backend\LetsGoBiking\bin\Debug\ProxyCache.exe.config

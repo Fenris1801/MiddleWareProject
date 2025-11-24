@@ -3,8 +3,6 @@ using Newtonsoft.Json.Linq;
 using ProxyCache;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Security.Cryptography;
 
 namespace LetsGoBiking {
 
@@ -128,14 +126,14 @@ namespace LetsGoBiking {
             (double)jSpot["features"][0]["properties"]["summary"]["distance"] +
             (double)jDest["features"][0]["properties"]["summary"]["distance"];
 
-            
 
-        var results = new JObject
-        {
-        ["type"] = "FeatureCollection",
-        ["features"] = new JArray
-        {
-            new JObject
+
+            var results = new JObject
+            {
+                ["type"] = "FeatureCollection",
+                ["features"] = new JArray
+    {
+        new JObject
         {
             ["type"] = "Feature",
             ["properties"] = new JObject
@@ -150,10 +148,14 @@ namespace LetsGoBiking {
             {
                 ["type"] = "LineString",
                 ["coordinates"] = allCoords
-            }
-                }
-                }
-                };
+            },
+            ["pickupStation"] = JToken.FromObject(nearestBike),
+            ["dropoffStation"] = JToken.FromObject(nearestSpot),
+        }
+    }
+            };
+
+
 
             return JsonConvert.SerializeObject(results);
         }

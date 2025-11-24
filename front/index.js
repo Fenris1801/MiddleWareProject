@@ -1,14 +1,32 @@
+function transformOpenRouteServiceToItinerary(geoJson, origin, destination) {
+    const itineraryData = {
+        origin: { lat: origin.lat, lng: origin.lon },
+        destination: { lat: destination.lat, lng: destination.lon },
+        pickupStation: geoJson.features[0].pickupStation ? { lat: geoJson.features[0].pickupStation.Address.lat, lng: geoJson.features[0].pickupStation.Address.lon } : null,
+        dropoffStation: geoJson.features[0].dropoffStation ? { lat: geoJson.features[0].dropoffStation.Address.lat, lng: geoJson.features[0].dropoffStation.Address.lon } : null,
+        route: []
+    };
+
+    if (geoJson.features && geoJson.features[0]) {
+        const feat = geoJson.features[0];
+        if (feat.geometry && feat.geometry.type === 'LineString') {
+            // Convertir [long, lat] -> [lat, long]
+            itineraryData.route = feat.geometry.coordinates.map(c => [c[1], c[0]]);
+        }
+    }
+
+    return itineraryData;
+}
+
 const itineraryComponent = document.querySelector('compo-itinerary');
 itineraryComponent.addEventListener('request-itinerary', async (event) => {
     const { origin, destination } = event.detail;
 
-    // Sécuriser / parser les coordonnées
     const fromLat = parseFloat(origin.lat);
     const fromLon = parseFloat(origin.lon);
     const toLat = parseFloat(destination.lat);
     const toLon = parseFloat(destination.lon);
 
-    // Important : vérifier qu’on a bien des coords (que l’utilisateur a cliqué sur une suggestion)
     if (
         Number.isNaN(fromLat) || Number.isNaN(fromLon) ||
         Number.isNaN(toLat) || Number.isNaN(toLon)
@@ -22,17 +40,24 @@ itineraryComponent.addEventListener('request-itinerary', async (event) => {
 
     try {
         const res = await fetch(url);
-        console.log('Itinéraire reçu :', res);
         if (!res.ok) {
             throw new Error(`Erreur HTTP ${res.status}`);
         }
-        const data = await res.json();
+        const geoJsonData = JSON.parse(await res.json());
+        console.log('Données GeoJSON reçues :', geoJsonData);
 
-        // TODO : afficher l’itinéraire sur la carte, ou dans la page
-        console.log('Itinéraire reçu :', data);
+        const displayData = transformOpenRouteServiceToItinerary(geoJsonData, {
+            lat: fromLat,
+            lon: fromLon
+        }, {
+            lat: toLat,
+            lon: toLon
+        });
+
+        setItinerary(displayData);
     } catch (err) {
-        console.error('Erreur lors de la récupération de l’itinéraire :', err);
-        alert("Impossible de récupérer l’itinéraire.");
+        console.error('Erreur lors de la récupération de l\'itinéraire :', err);
+        alert("Impossible de récupérer l'itinéraire.");
     }
 });
 

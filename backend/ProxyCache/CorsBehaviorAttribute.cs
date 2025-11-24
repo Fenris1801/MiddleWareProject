@@ -3,7 +3,6 @@ using System.ServiceModel.Description;
 using System.ServiceModel.Dispatcher;
 using System.ServiceModel.Channels;
 using System.ServiceModel;
-using System.ServiceModel.Web;
 
 [AttributeUsage(AttributeTargets.Class)]
 public class CorsBehaviorAttribute : Attribute, IServiceBehavior

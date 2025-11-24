@@ -1,17 +1,15 @@
 ﻿using System;
 using System.ServiceModel;
-using System.ServiceModel.Description;
 
-namespace LetsGoBiking
+namespace ProxyCache
 {
     class Program
     {
         static void Main()
         {
-            //Create ServiceHost
-            ServiceHost host = new ServiceHost(typeof(ServiceGPS));
 
-            //Start the Service
+            ServiceHost host = new ServiceHost(typeof(ProxyCache));
+
             host.Open();
 
             Console.WriteLine("Service is host at " + DateTime.Now.ToString());
