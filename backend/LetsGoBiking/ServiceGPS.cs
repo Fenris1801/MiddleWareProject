@@ -97,7 +97,9 @@ namespace LetsGoBiking {
 
             if (TimeToWalk < TimeToRide)
             {
-                return getTodestinationOnFoot;
+                var obj = JObject.Parse(getTodestinationOnFoot);
+                obj["usebike"] = false;
+                return obj.ToString();
             }
 
             var jBike = JObject.Parse(getBike);
@@ -106,58 +108,43 @@ namespace LetsGoBiking {
 
             JArray allCoords = new JArray();
 
-            void AppendCoords(JObject segment, bool skipFirstPoint)
+            void AppendCoords(JObject baseSegments, JObject addedSegment)
             {
-                var coords = (JArray)segment["features"][0]["geometry"]["coordinates"];
-                int startIndex = skipFirstPoint ? 1 : 0;
+                var baseCoords = (JArray)baseSegments["features"][0]["geometry"]["coordinates"];
+                var coords = (JArray)addedSegment["features"][0]["geometry"]["coordinates"];
 
-                for (int i = startIndex; i < coords.Count; i++)
+                for (int i = 1; i < coords.Count; i++)
                 {
-                    allCoords.Add(coords[i]);
+                    baseCoords.Add(coords[i]);
                 }
             }
 
-            AppendCoords(jBike, false);
-            AppendCoords(jSpot, true);
-            AppendCoords(jDest, true);
+            void Merge(JObject baseSegments, JObject addedSegment)
+            {
+                var baseArray = (JArray)baseSegments["features"][0]["properties"]["segments"];
+                var addedArray = (JArray)addedSegment["features"][0]["properties"]["segments"];
 
-            double totalDistance =
+                foreach (var seg in addedArray)
+                {
+                    baseArray.Add(seg);
+                }
+            }
+
+            var result = jBike;
+
+            AppendCoords(result, jSpot);
+            AppendCoords(result, jDest);
+
+            result["features"][0]["properties"]["summary"]["distance"] =
             (double)jBike["features"][0]["properties"]["summary"]["distance"] +
             (double)jSpot["features"][0]["properties"]["summary"]["distance"] +
             (double)jDest["features"][0]["properties"]["summary"]["distance"];
+            jBike["features"][0]["properties"]["summary"]["duration"] = TimeToRide;
 
+            Merge(result, jSpot);
+            Merge(result, jDest);
 
-
-            var results = new JObject
-            {
-                ["type"] = "FeatureCollection",
-                ["features"] = new JArray
-    {
-        new JObject
-        {
-            ["type"] = "Feature",
-            ["properties"] = new JObject
-            {
-                ["segments"] = new JObject
-                {
-                    ["distance"] = totalDistance,
-                    ["duration"] = TimeToRide,
-                }
-            },
-            ["geometry"] = new JObject
-            {
-                ["type"] = "LineString",
-                ["coordinates"] = allCoords
-            },
-            ["pickupStation"] = JToken.FromObject(nearestBike),
-            ["dropoffStation"] = JToken.FromObject(nearestSpot),
-        }
-    }
-            };
-
-
-
-            return JsonConvert.SerializeObject(results);
+            return JsonConvert.SerializeObject(result);
         }
 
         private double CalcDistance(AddressPoint from, AddressPoint to)

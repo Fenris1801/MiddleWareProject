@@ -25,7 +25,8 @@ template.innerHTML = `
     button:hover {
       background: #e2e2e2;
     }
-    .messages {
+    .messages,
+    .steps {
       max-height: 150px;
       overflow-y: auto;
       border: 1px solid #eee;
@@ -57,8 +58,12 @@ template.innerHTML = `
     <button type="button" id="recompute">Recalculer l'itinéraire</button>
   </div>
   <div class="messages"></div>
+  <div class="infos">
+    <strong>Informations de l'itinéraire :</strong>
+    <ul></ul>
+  </div>
   <div class="steps">
-    <strong>Étapes de l'itinéraire :</strong>
+    <strong>Etapes de l'itinéraire :</strong>
     <ol></ol>
   </div>
 `;
@@ -94,6 +99,16 @@ export class Messages extends HTMLElement {
 
     div.innerHTML = `<span class="time">[${time}]</span>${text}`;
     container.prepend(div);
+  }
+
+  setInfos(infos) {
+    const list = this.shadowRoot.querySelector('.infos ul');
+    list.innerHTML = '';
+    (infos || []).forEach(step => {
+      const li = document.createElement('li');
+      li.textContent = step;
+      list.appendChild(li);
+    });
   }
 
   setSteps(steps) {

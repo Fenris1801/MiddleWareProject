@@ -7,6 +7,17 @@ function transformOpenRouteServiceToItinerary(geoJson, origin, destination) {
         route: []
     };
 
+    const feat = geoJson.features[0];
+    const summary = feat.properties.summary;
+    const segments = feat.properties.segments;
+    console.log(segments[0].distance);
+
+    const distance = summary.distance;
+    const duration = summary.duration;
+
+    const distKm = (distance / 1000).toFixed(2) + " km";
+    const timeMin = Math.round(duration / 60) + " min";
+
     if (geoJson.features && geoJson.features[0]) {
         const feat = geoJson.features[0];
         if (feat.geometry && feat.geometry.type === 'LineString') {
@@ -14,6 +25,32 @@ function transformOpenRouteServiceToItinerary(geoJson, origin, destination) {
             itineraryData.route = feat.geometry.coordinates.map(c => [c[1], c[0]]);
         }
     }
+
+    const infos = [
+        `Distance totale : ${distKm}`,
+        `Durée estimée : ${timeMin}`
+    ];
+
+    if (segments.length === 3) {
+        infos.push(`Distance avant velo : ${(segments[0].distance / 1000).toFixed(2) + " km\n"}`);
+        infos.push(`Distance en velo : ${(segments[1].distance / 1000).toFixed(2) + " km\n"}`);
+        infos.push(`Distance après velo : ${(segments[2].distance / 1000).toFixed(2) + " km\n"}`);
+    }
+    else { infos.push(`Plus rapide sans vélo !`) }
+
+    const messagesComponent = document.querySelector('compo-messages');
+    messagesComponent.setInfos(infos);
+
+    var steps = [];
+    segments.forEach((segment, index) => {
+        segment.steps.forEach(step => {
+            steps.push(step.instruction);
+        });
+    });
+
+    messagesComponent.setSteps(steps);
+
+
 
     return itineraryData;
 }
