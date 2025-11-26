@@ -1,0 +1,41 @@
+services:
+  backend-proxy:
+    build:
+      context: ./backend/ProxyCacheServer
+      dockerfile: Dockerfile
+    container_name: backend-proxy
+    environment:
+      - JcDecauxApiKey=${JcDecauxApiKey}
+      - OpenRouteApiKey=${OpenRouteApiKey}
+    networks:
+      - appnet
+    ports:
+      - "8733:8733"
+
+  backend-routing:
+    build:
+      context: ./backend/RoutingServer
+      dockerfile: Dockerfile
+    container_name: backend-routing
+    networks:
+      - appnet
+    depends_on:
+      - backend-proxy
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    container_name: frontend
+    networks:
+      - appnet
+    depends_on:
+      - backend-routing
+    ports:
+      - "80:80"
+
+networks:
+  appnet:
+    driver: bridge
