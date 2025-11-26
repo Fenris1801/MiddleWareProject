@@ -2,6 +2,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeavyClient", "HeavyClient\HeavyClient.csproj", "{21EEF289-C0D5-E6A4-5927-09FF60BDFA97}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoutingServer", "RoutingServer\RoutingServer.csproj", "{967E05E6-8A9B-58C5-ACCE-D52E702F22EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyCacheServer", "ProxyCacheServer\ProxyCacheServer.csproj", "{5B449FDE-B48B-94BE-5209-56744A29FE39}"
@@ -12,6 +14,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21EEF289-C0D5-E6A4-5927-09FF60BDFA97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EEF289-C0D5-E6A4-5927-09FF60BDFA97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EEF289-C0D5-E6A4-5927-09FF60BDFA97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EEF289-C0D5-E6A4-5927-09FF60BDFA97}.Release|Any CPU.Build.0 = Release|Any CPU
 		{967E05E6-8A9B-58C5-ACCE-D52E702F22EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{967E05E6-8A9B-58C5-ACCE-D52E702F22EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{967E05E6-8A9B-58C5-ACCE-D52E702F22EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -25,6 +31,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8FD1A0C9-F6A9-490F-8376-997A20109FBB}
+		SolutionGuid = {7B3BCF0A-900D-41AA-A96B-8D7F23FEF894}
 	EndGlobalSection
 EndGlobal
