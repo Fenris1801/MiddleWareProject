@@ -1,41 +1,38 @@
-﻿using Newtonsoft.Json;
+
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using ProxyCache;
-using System;
-using System.Collections.Generic;
+using ServiceReference;
 
-namespace LetsGoBiking {
-
-    [CorsBehavior]
-    public class ServiceGPS : IServiceGPS 
+namespace RoutingServer
+{
+    public class ServiceGPS : IServiceGPS
     {
-        public string GetItinerary(double originLat, double originLon, double destLat, double destLon)
+        public async Task<string> GetItinerary(double originLat, double originLon, double destLat, double destLon)
         {
-            Console.WriteLine("Début boucle");
             var from = new AddressPoint
             {
-                label = "from",
-                lat = originLat,
-                lon = originLon
+                Label = "from",
+                Lat = originLat,
+                Lon = originLon
             };
 
             var to = new AddressPoint
             {
-                label = "to",
-                lat = destLat,
-                lon = destLon
+                Label = "to",
+                Lat = destLat,
+                Lon = destLon
             };
 
-            var proxy = new ProxyCache.ProxyCache();
+            var proxy = new ProxyCacheServiceClient();
 
-            var contracts = proxy.GetContracts();
+            var contracts = await proxy.GetContractsAsync();
             var stations = new List<Station>();
             var stationsWithBikes = new List<Station>();
             var stationsWithSpots = new List<Station>();
 
-            foreach (var contract in contracts.everyContracts)
+            foreach (var contract in contracts.Items)
             {
-                stations.AddRange(proxy.GetStations(contract.ContractName));
+                stations.AddRange(await proxy.GetStationsAsync(contract.ContractName));
             }
 
             foreach (var station in stations)
@@ -77,14 +74,16 @@ namespace LetsGoBiking {
             if (nearestBike == null || nearestSpot == null)
             {
                 // Pas de solution vélo, on marche
-                return proxy.GetRoute(false, from, to);
+                string routes = await proxy.GetRouteAsync(false, from, to);
+                proxy.Close();
+                return routes;
             }
 
-            var getBike = proxy.GetRoute(false, from, nearestBike.Address);
-            var getToSpot = proxy.GetRoute(true, nearestBike.Address, nearestSpot.Address);
-            var getTodestination = proxy.GetRoute(false, nearestSpot.Address, to);
+            var getBike = await proxy.GetRouteAsync(false, from, nearestBike.Address);
+            var getToSpot = await proxy.GetRouteAsync(true, nearestBike.Address, nearestSpot.Address);
+            var getTodestination = await proxy.GetRouteAsync(false, nearestSpot.Address, to);
 
-            var getTodestinationOnFoot = proxy.GetRoute(false, from, to);
+            var getTodestinationOnFoot = await proxy.GetRouteAsync(false, from, to);
 
             System.Diagnostics.Debug.WriteLine("getBike is null? " + (getBike == null));
             System.Diagnostics.Debug.WriteLine("getToSpot is null? " + (getToSpot == null));
@@ -99,6 +98,7 @@ namespace LetsGoBiking {
             {
                 var obj = JObject.Parse(getTodestinationOnFoot);
                 obj["usebike"] = false;
+                proxy.Close();
                 return obj.ToString();
             }
 
@@ -144,13 +144,14 @@ namespace LetsGoBiking {
             Merge(result, jSpot);
             Merge(result, jDest);
 
+            proxy.Close();
             return JsonConvert.SerializeObject(result);
         }
 
         private double CalcDistance(AddressPoint from, AddressPoint to)
         {
-            double latDiff = from.lat - to.lat;
-            double lonDiff = from.lon - to.lon;
+            double latDiff = from.Lat - to.Lat;
+            double lonDiff = from.Lon - to.Lon;
             return Math.Sqrt(latDiff * latDiff + lonDiff * lonDiff);
         }
 

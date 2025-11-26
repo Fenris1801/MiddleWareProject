@@ -1,25 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.Serialization;
 
-namespace ProxyCache
+namespace ProxyCacheServer
 {
     [DataContract]
     public class Station
     {
-        [DataMember] 
+        [DataMember]
         public int Number { get; set; }
-
 
         [DataMember]
         public string Name { get; set; }
 
         [DataMember]
         public string ContractName { get; set; }
-
 
         [DataMember]
         public AddressPoint Address { get; set; }

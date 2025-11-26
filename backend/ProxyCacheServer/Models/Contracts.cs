@@ -1,26 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Net.Http;
+﻿using System.Runtime.Serialization;
 using Newtonsoft.Json.Linq;
-using System.Configuration;
 
-namespace ProxyCache
+namespace ProxyCacheServer
 {
     [DataContract]
-    public class Contracts
+    public class Contracts : IProxyCacheItem
     {
-        [DataMember] public List<Contract> everyContracts = new List<Contract>();
-        public Contracts(string ContractName)
-        {
+        public static HttpClient Client { get; set; }
 
-            var apiKey = ConfigurationManager.AppSettings["JcDecauxApiKey"];
+        [DataMember] public List<Contract> Items { get; set; } = new();
+
+        public async Task FillFromWebAsync(params string[] args)
+        {
+            var apiKey = Environment.GetEnvironmentVariable("JcDecauxApiKey")
+                       ?? throw new NullReferenceException("JcDecauxApiKey env variable not found");
+
             var url = $"https://api.jcdecaux.com/vls/v3/contracts?apiKey={apiKey}";
 
-            var req = new HttpClient();
-
-            var Array = JArray.Parse(req.GetStringAsync(url).Result);
+            var Array = JArray.Parse(await Client.GetStringAsync(url));
 
             foreach (var c in Array)
             {
@@ -34,7 +31,7 @@ namespace ProxyCache
                 if (!string.IsNullOrWhiteSpace(country) && !string.Equals(country, "FR"))
                     continue;
 
-                everyContracts.Add(new Contract
+                Items.Add(new Contract
                 {
                     ContractName = name,
                     Cities = (cities != null) ? new HashSet<string>(cities, StringComparer.OrdinalIgnoreCase) : new HashSet<string>(StringComparer.OrdinalIgnoreCase)

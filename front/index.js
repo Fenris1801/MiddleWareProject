@@ -72,7 +72,7 @@ itineraryComponent.addEventListener('request-itinerary', async (event) => {
         return;
     }
 
-    const baseUrl = 'http://localhost:8080/ServerGPS/itinerary';
+    const baseUrl = 'http://localhost:8080/ServiceGPS/itinerary';
     const url = `${baseUrl}?fromLat=${fromLat}&fromLon=${fromLon}&toLat=${toLat}&toLon=${toLon}`;
 
     try {
