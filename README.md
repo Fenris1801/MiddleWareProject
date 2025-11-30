@@ -47,7 +47,7 @@ docker-compose up --build
 
 Once everything is running, open the web application at:
 
-👉 **[http://localhost:80](http://localhost:80)**
+**[http://localhost:80](http://localhost:80)**
 
 ---
 
@@ -82,7 +82,7 @@ When you access **[http://localhost:80](http://localhost:80)**, you can:
 
 ---
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 This project implements a distributed middleware-based ecosystem composed of several coordinated microservices.
 Each component contributes to routing, real-time data broadcasting, caching, or user interaction.

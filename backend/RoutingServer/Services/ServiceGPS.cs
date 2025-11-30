@@ -140,6 +140,25 @@ namespace RoutingServer
             (double)jSpot["features"][0]["properties"]["summary"]["distance"] +
             (double)jDest["features"][0]["properties"]["summary"]["distance"];
             jBike["features"][0]["properties"]["summary"]["duration"] = TimeToRide;
+            result["features"][0]["pickupStation"] = JToken.FromObject(new
+            {
+                Address = new
+                {
+                    lat = nearestBike.Address.Lat,
+                    lon = nearestBike.Address.Lon
+                }
+            });
+
+            result["features"][0]["dropoffStation"] = JToken.FromObject(new
+            {
+                Address = new
+                {
+                    lat = nearestSpot.Address.Lat,
+                    lon = nearestSpot.Address.Lon
+                }
+            });
+
+            result["usebike"] = true;
 
             Merge(result, jSpot);
             Merge(result, jDest);

@@ -90,6 +90,7 @@ itineraryComponent.addEventListener('request-itinerary', async (event) => {
             lat: toLat,
             lon: toLon
         });
+        console.log('Données formatées pour l\'itinéraire :', displayData);
 
         setItinerary(displayData);
     } catch (err) {
