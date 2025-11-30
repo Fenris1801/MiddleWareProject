@@ -15,7 +15,7 @@ template.innerHTML = `
     background: #f4f4f4; cursor: pointer; font-size: 0.8rem;
   }
   button:hover { background: #e2e2e2; }
-  .messages {
+  .messages, .steps {
     max-height: 200px; overflow-y: auto;
     border: 1px solid #eee; border-radius: 4px;
     padding: 0.4rem; background: #fafafa;
@@ -23,9 +23,13 @@ template.innerHTML = `
   .message { margin-bottom: 0.25rem; }
   .message .time { color: #666; margin-right: 0.25rem; }
   .topics { margin: 0.5rem 0; }
+  .steps ol {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
 </style>
 
-<h2>Live Notifications</h2>
+<h2>Messages & alertes</h2>
 
 <div class="toolbar">
   <button id="connect">Connect</button>
@@ -40,6 +44,15 @@ template.innerHTML = `
 </div>
 
 <div class="messages"></div>
+
+<div class="infos">
+  <strong>Informations de l'itinéraire :</strong>
+  <ul></ul>
+</div>
+<div class="steps">
+  <strong>Etapes de l'itinéraire :</strong>
+  <ol></ol>
+</div>
 `;
 
 export class Messages extends HTMLElement {
@@ -156,6 +169,26 @@ export class Messages extends HTMLElement {
     });
 
     this.addMessage("Subscriptions updated");
+  }
+
+  setInfos(infos) {
+    const list = this.shadowRoot.querySelector('.infos ul');
+    list.innerHTML = '';
+    (infos || []).forEach(step => {
+      const li = document.createElement('li');
+      li.textContent = step;
+      list.appendChild(li);
+    });
+  }
+
+  setSteps(steps) {
+    const list = this.shadowRoot.querySelector('.steps ol');
+    list.innerHTML = '';
+    (steps || []).forEach(step => {
+      const li = document.createElement('li');
+      li.textContent = step;
+      list.appendChild(li);
+    });
   }
 }
 
